@@ -59,4 +59,9 @@ public class EmployeeController {
         Map<String, Boolean> response = employeeService.deleteEmployee(id);
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping("/employeees")
+    public List<Employee> getAllEmployeees(){
+        return employeeService.getAllEmployees();
+    }
 }
